@@ -1,0 +1,89 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.works{
+    padding-top: 60px;   
+gi    &__wrapper{
+        position: relative;
+    }
+    &__slider{
+        margin-top: 40px;
+    }
+    .swiper-slide img{
+        width: 100%;
+    }
+    .swiper-pagination{
+        position: absolute;
+        bottom: -30px;
+    }
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+        background-color: $Dark;
+        opacity: 1;
+        border-radius: 0%;
+        -webkit-tap-highlight-color: transperent;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: $Ceramic;
+        
+    }
+    &__nav{
+        display: none;
+    }
+  
+}
+
+@media screen and (min-width: 768px){
+    .works{
+        &__slider {
+            margin: 45px 160px 0 160px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .works{
+        &__slider {
+            margin: 80px 40px 0 40px;
+        }
+        .swiper-pagination {
+            bottom: -25px;
+        }     
+        &__wrapper{
+            width: 100%;
+        }
+        &__nav{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            font-size: 30px;
+            &:before{
+                width: auto;
+                margin: 0;
+            }
+                       
+        }
+    }
+    .icon-left-open{
+        left: 10px;
+    }
+    .icon-right-open{
+        right: 10px;
+    }
+}
+
+@media screen and (min-width: 1920px){
+    .works{
+        padding-top: 100px;;
+        &__wrapper{
+            width: auto;
+        }
+        &__slider{
+            margin: 80px 85px 0 85px;;
+        }
+    }
+}
+
+
+
