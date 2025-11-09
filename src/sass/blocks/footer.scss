@@ -1,0 +1,139 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+.footer{
+    background: $Dark;
+    padding: 50px 0;
+    &__form{
+        margin-top: 40px;
+    }
+    &__fieldset{
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__lable span{
+        font-weight: 400;
+        font-size: 16px;
+        color: $Light;
+    }
+    &__boxinput{
+        margin-top: 40px;
+    }
+    &__input{
+        width: 293px;
+        height: 32px;
+        background-color: $Dark !important;
+        border: none;
+        border-bottom: 1px solid $ui-active;
+        &::placeholder{
+            font-weight: 400;
+            font-size: 14px;
+            color: $ui-active;
+        }
+    }
+    &__conset{
+        margin: 20px 0;
+    }
+    &__checkbox{
+        input{
+            border: 1px solid $Light;
+            border-radius: 2px;
+            width: 15px;
+            height: 15px;
+            accent-color: $Dark;
+        }
+        margin-left: 15px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+        color: $Light;
+        a{
+            color: #a22dc6;
+            text-decoration: none;
+        }
+    }
+    &__btn{
+        margin-top: 20px;
+    }
+    &__links{
+        width: 212px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 66px;
+        row-gap: 40px;
+        margin-top: 40px;
+        ul{
+            li:first-of-type{
+                margin-bottom: 40px;
+            }
+            list-style-type: none;
+            padding: 0;
+            a{
+                text-decoration: none;
+                text-transform: none;
+                line-height: 2;
+                font-weight: 400;
+                font-size: 16px;
+                color: $Light;
+            }
+        }
+    }
+    &__follow{
+        margin-top: 40px;
+    }
+    &__icons{
+        &:before{
+            margin: 0;
+
+        }
+        color: $Light;
+        width: 24px;
+        height: 24px;
+    }
+    &__icons-wrapper{
+        margin-top: 40px;
+        display: flex;
+        gap: 10px;
+    }
+    &__text{
+        display: block;
+        margin-top: 40px;
+        text-align: center;
+        
+        font-weight: 400;
+        font-size: 14px;
+        color: $Light;
+    }
+};
+
+@media screen and (min-width: 768px) {
+    .footer{
+        &__wrapper{
+        position: relative;
+        }
+        &__links{
+            flex-wrap: nowrap;
+        }
+        &__follow{
+            position: absolute;
+            right: 24px;
+            top: 259px;
+        }
+    }
+};
+
+@media screen and (min-width: 1200px){
+    .footer{
+        &__follow{
+            position: static;
+        }
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__links{
+            width: 428px;
+        }
+    }
+};

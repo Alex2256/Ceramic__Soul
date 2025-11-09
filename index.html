@@ -137,7 +137,11 @@
                 id="question"
               ></textarea>
               <div class="git__conset">
-                <input class="git__checkbox" type="checkbox" id="terms" />
+                <input
+                  class="git__checkbox question"
+                  type="checkbox"
+                  id="terms"
+                />
                 <label for="terms"
                   >I agree with the <a href="#">terms</a></label
                 >
@@ -177,6 +181,78 @@
           <span class="icon-right-open works__nav"></span>
         </div>
       </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__newsletter">
+            <h4 class="title-h4">newsletter</h4>
+            <form action="#" class="footer__form">
+              <fieldset class="footer__fieldset">
+                <div class="footer__fieldbox">
+                  <div class="footer__boxname">
+                    <label for="name" class="footer__lable"
+                      ><span
+                        >Keep up to date with news and promotions</span
+                      ></label
+                    >
+                  </div>
+                  <div class="footer__boxinput">
+                    <label for="email" class="footer__lable"></label>
+                    <input
+                      type="text"
+                      class="footer__input"
+                      id="email"
+                      required
+                      placeholder="Enter your e-mail"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+              <div class="footer__conset">
+                <input type="checkbox" id="question" />
+                <label class="footer__checkbox" for="question"
+                  >I agree with the <a href="#">terms</a></label
+                >
+              </div>
+              <button class="btn-submit footer__btn">submit</button>
+            </form>
+          </div>
+          <div class="footer__links">
+            <div class="footer__discover">
+              <ul>
+                <li class="title-h4">Discover</li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <div class="footer__shoping">
+              <ul>
+                <li class="title-h4">shopping</li>
+                <li><a href="#">Catalog</a></li>
+              </ul>
+            </div>
+            <div class="footer__information">
+              <ul>
+                <li class="title-h4">information</li>
+                <li><a href="#">Terms and Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__follow">
+            <h4 class="title-h4">follow us</h4>
+            <div class="footer__icons-wrapper">
+              <a href="#"><span class="icon-facebook footer__icons"></span></a>
+              <a href="#"><span class="icon-instagram footer__icons"></span></a>
+              <a href="#"
+                ><span class="icon-pinterest-circled footer__icons"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="footer__text">© Copyright 2025, Ceramic soul</span>
     </section>
 
     <script type="module" src="/src/js/script.js"></script>
