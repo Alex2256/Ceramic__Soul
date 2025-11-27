@@ -1,0 +1,82 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.blog{
+    padding: 50px 0 60px 0;
+    .title-h1{
+        margin-top: 60px;
+    }
+    &__wrapper{
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        
+    }
+    &__card{
+        border: 1px solid $Dark;
+       
+    }
+    &__data{
+        padding: 25px 25px 0 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    &__text{
+        padding: 25px 25px 25px 25px;
+        font-weight: 400;
+        font-size: 16px;   
+    }
+    &__img{
+        max-inline-size: calc(100% + 2px);
+        transform: translateX(-1px) translateY(-1px);
+    }
+};
+
+@media screen and (min-width: 768px){
+    .blog{
+        &__wrapper{
+            position: relative;
+            padding: 25px 25px 0 25px;
+            @include dicoration;
+        }
+        &__data {
+            justify-content: space-between;
+        }
+        &__btn{
+            transform: translateY(-1px);
+        }
+        &__text{
+            padding: 15px 25px 25px 25px;
+        }
+        &__img{
+            width: 100%;
+        }
+    }
+};
+@media screen and (min-width: 1200px){
+    .blog{
+        &__wrapper{
+            padding: 27px 25px 0 25px;
+            flex-wrap: nowrap;
+            gap: 50px;
+            align-items:baseline;
+        }
+        &__img{
+            min-height: 240px;
+            object-fit: cover;
+        }
+        &__card{
+            width: 50%;
+            height: auto;
+        }
+    }
+};
+@media screen and (min-width: 1920px){
+    .blog{
+        &__wrapper{
+            align-items: normal;
+        }
+    }
+};

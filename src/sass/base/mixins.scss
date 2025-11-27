@@ -25,3 +25,24 @@
     cursor: pointer;
 };
 
+@mixin dicoration {
+    &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid $Dark;
+            width: 200px;
+            height: 1px;
+        }
+    &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid $Dark;
+            width: 1px;
+            height: 200px;
+        }
+}
+
