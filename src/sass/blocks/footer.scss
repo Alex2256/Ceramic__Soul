@@ -2,10 +2,21 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .footer{
+    .just-validate-error-field{
+        border-bottom: 1px solid $ui-error;
+        &::placeholder{
+        color: $ui-error;
+        }
+    }
+    .errorMessage_footer{
+        margin-top: 8px;
+    }
     background: $Dark;
     padding: 50px 0;
     &__form{
         margin-top: 40px;
+
+
     }
     &__fieldset{
         border: none;
@@ -23,9 +34,10 @@
     &__input{
         width: 293px;
         height: 32px;
-        background-color: $Dark !important;
+        background-color: $Dark;
         border: none;
         border-bottom: 1px solid $ui-active;
+        color: white;
         &::placeholder{
             font-weight: 400;
             font-size: 14px;

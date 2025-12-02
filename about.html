@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Website for Ceramic soul brand" />
     <meta name="author" content="Awesome student" />
-    <title>Catalog</title>
+    <title>About</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,9 +22,9 @@
             <div class="header__menu-close"><span></span><span></span></div>
             <nav class="header__menu-nav">
               <ul>
-                <li><a href="#">catalog</a></li>
-                <li><a href="#">blog</a></li>
-                <li><a href="#">about</a></li>
+                <li><a href="/catalog.html">catalog</a></li>
+                <li><a href="/blog.html">blog</a></li>
+                <li><a href="/about.html">about</a></li>
               </ul>
             </nav>
           </div>
@@ -40,9 +40,9 @@
           </div>
           <div class="header__nav">
             <ul>
-              <li><a class="header__link" href="#">catalog</a></li>
-              <li><a class="header__link" href="#">blog</a></li>
-              <li><a class="header__link" href="#">about</a></li>
+              <li><a class="header__link" href="/catalog.html">catalog</a></li>
+              <li><a class="header__link" href="/blog.html">blog</a></li>
+              <li><a class="header__link" href="/about.html">about</a></li>
             </ul>
           </div>
         </div>
@@ -93,7 +93,7 @@
             <img class="git__tea" src="/src/img/form/tea.jpg" alt="tea" />
           </div>
           <div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-1-2">
-            <form action="#" class="git__form">
+            <form action="#" id="form" class="git__form">
               <fieldset class="git__fieldset">
                 <div class="git__fieldbox">
                   <div class="git__boxname">
@@ -105,6 +105,7 @@
                       id="name"
                       placeholder="Name"
                     />
+                    <div class="errorMessage_footer"></div>
                   </div>
                   <div class="git__boxinput">
                     <label class="git__label" for="email">Email</label>
@@ -125,6 +126,7 @@
                 placeholder="Question"
                 id="question"
               ></textarea>
+              <div class="errorMessage"></div>
               <div class="git__conset">
                 <input
                   class="git__checkbox question"
@@ -135,6 +137,7 @@
                   >I agree with the <a href="#">terms</a></label
                 >
               </div>
+              <div class="errorMessage-checkbox"></div>
               <button class="btn-send git__btn">send request</button>
             </form>
             <img class="git__vase" src="/src/img/form/vase.png" alt="vase" />
@@ -163,7 +166,7 @@
         <div class="footer__wrapper">
           <div class="footer__newsletter">
             <h4 class="title-h4">newsletter</h4>
-            <form action="#" class="footer__form">
+            <form action="#" id="footerForm" class="footer__form">
               <fieldset class="footer__fieldset">
                 <div class="footer__fieldbox">
                   <div class="footer__boxname">
@@ -174,23 +177,25 @@
                     >
                   </div>
                   <div class="footer__boxinput">
-                    <label for="email" class="footer__lable"></label>
+                    <label for="footer__email" class="footer__lable"></label>
                     <input
                       type="text"
                       class="footer__input"
-                      id="email"
+                      id="footer__email"
                       required
                       placeholder="Enter your e-mail"
                     />
+                    <div class="errorMessage_footer"></div>
                   </div>
                 </div>
               </fieldset>
               <div class="footer__conset">
-                <input type="checkbox" id="question" />
-                <label class="footer__checkbox" for="question"
+                <input type="checkbox" id="footer__terms" />
+                <label class="footer__checkbox" for="footer__terms"
                   >I agree with the <a href="#">terms</a></label
                 >
               </div>
+              <div class="errorMessage-checkbox"></div>
               <button class="btn-submit footer__btn">submit</button>
             </form>
           </div>
@@ -198,14 +203,14 @@
             <div class="footer__discover">
               <ul>
                 <li class="title-h4">Discover</li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/blog.html">Blog</a></li>
               </ul>
             </div>
             <div class="footer__shoping">
               <ul>
                 <li class="title-h4">shopping</li>
-                <li><a href="#">Catalog</a></li>
+                <li><a href="/catalog.html">Catalog</a></li>
               </ul>
             </div>
             <div class="footer__information">

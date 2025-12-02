@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import JustValidate from 'just-validate';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -71,4 +72,109 @@ try {
 
 	// Показываем первый контент при загрузке
 	contents.forEach((c, i) => (c.style.display = i === 0 ? "block" : "none"));
-} catch (e) {}
+} catch (e) { }
+
+try {
+  const validator = new JustValidate('.git__form');
+  validator
+    .addField('#name', [
+      {
+        rule: 'required',
+        errorMessage: "the name is entered incorrectly"
+      },
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: "enter at least 2 characters",
+      },
+    ])
+    .addField('#email', [
+      {
+        rule: 'required',
+      },
+      {
+        rule: 'email',
+      }
+    ])
+    .addField('#question', [
+      {
+        rule: 'required'
+      },
+      {
+        rule: 'minLength',
+        value: 5,
+      },
+    ],
+      {
+        errorsContainer: document
+          .querySelector("#question")
+          .parentElement.querySelector(".errorMessage"),
+      }  
+  )
+    .addField('#terms', [
+      {
+        rule: 'required'
+      },
+
+    ],
+      {
+				errorsContainer: document
+					.querySelector("#terms")
+					.parentElement.parentElement.querySelector(".errorMessage-checkbox"),
+			}
+  )
+     
+  .onSuccess((event) => {
+			const form = event.currentTarget;
+			const formData = new FormData(form);
+
+			fetch("https://httpbin.org/post", {
+				method: "POST",
+				body: formData,
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log("Success", data);
+					form.reset();
+ 		});
+		});
+  
+} catch (e) { };
+
+try {
+  const validator_footer = new JustValidate('#footerForm');
+    validator_footer
+       .addField('#footer__email', [
+      {
+        rule: 'required',
+      },
+      {
+        rule: 'email',
+      }
+       ],
+         {
+        errorsContainer: document
+          .querySelector("#footerForm")
+          .parentElement.querySelector(".errorMessage_footer"),
+      }
+    )
+        .addField('#footer__terms', [
+      {
+        rule: 'required'
+      },
+        ])
+        .onSuccess((event) => {
+			const form = event.currentTarget;
+			const formData = new FormData(form);
+
+			fetch("https://httpbin.org/post", {
+				method: "POST",
+				body: formData,
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log("Success", data);
+					form.reset();
+ 		});
+		});
+} catch (e) { };

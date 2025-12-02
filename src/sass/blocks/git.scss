@@ -1,5 +1,8 @@
 @use "/src/sass/base/variables.scss" as *;
 .git{
+    .just-validate-error-field {
+        border: 1px solid $ui-error;
+    }
     padding-top: 60px;
     &__wrapper{
         padding-top: 60px;
@@ -9,8 +12,10 @@
     }
     &__vase {
         display: none;
-    
+        animation: slidein 5s;
+        
     }
+
     &__fieldset{
         margin-bottom: 4px;
         padding: 0;
@@ -65,9 +70,10 @@
         font-size: 14px;
         line-height: 200%;
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         gap: 15px;
+        row-gap: 2px;
         a {
             color: #a22dc6;
             text-decoration: none;
@@ -81,6 +87,7 @@
     &__btn{
         margin-top: 20px;
     }
+
 };
 
 
